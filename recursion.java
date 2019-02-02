@@ -28,11 +28,23 @@ public class recursion{
     System.out.println(fib(46) + " (should be 1836311903)");
     System.out.println("------------------------------------------------");
     System.out.println("testing makeAllSums method");
-
+    System.out.println(makeAllSums(0));
+    System.out.println(makeAllSums(1));
+    System.out.println(makeAllSums(2));
+    System.out.println(makeAllSums(3));
+    System.out.println(makeAllSums(4));
   }
 
   public static ArrayList<Integer> makeAllSums(int n){
-    
+    ArrayList<Integer> output = new ArrayList<Integer>();
+    output.add(0);
+    if (n == 0) return output;
+    else{
+      output = makeAllSums(n - 1);
+      int currentSize = output.size();
+      for (int idx = 0; idx < currentSize; idx ++) output.add(output.get(idx) + n);
+    }
+    return output;
   }
 
 
