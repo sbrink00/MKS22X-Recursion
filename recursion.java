@@ -16,8 +16,15 @@ public class recursion{
     System.out.println(fibHelper(0, 200, 389231, 323));
     System.out.println(fibHelper(1, 200, 389231, 323));
     System.out.println(fibHelper(2, 1, 0, 2));
-    System.out.println(fibHelper(14, 1, 0, 2));
+    System.out.println(fibHelper(14, 1, 0, 2) + "should be 377");
     System.out.println(fibHelper(46, 1, 0, 2) + " (should be 1836311903)");
+    System.out.println("------------------------------------------------");
+    System.out.println("testing fib method. Should return the same values as fibHelper");
+    System.out.println(fib(0));
+    System.out.println(fib(1));
+    System.out.println(fib(2));
+    System.out.println(fib(14) + " (should be 377)");
+    System.out.println(fib(46) + " (should be 1836311903)");
 
   }
 
@@ -31,6 +38,10 @@ public class recursion{
     //within the tolerance.
     else if (((Math.abs(guess * guess - n) / n) * 100) <= tolerance) return guess;
     else return sqrtHelper(n, ((n / guess + guess) / 2), tolerance);
+  }
+
+  public static int fib(int n){
+    return fibHelper(n, 1, 0, 2);
   }
 
   //n is the place of the fibonacci numer we want to find.
