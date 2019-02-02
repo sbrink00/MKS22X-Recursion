@@ -16,6 +16,8 @@ public class recursion{
     System.out.println(fibHelper(0, 200, 389231, 323));
     System.out.println(fibHelper(1, 200, 389231, 323));
     System.out.println(fibHelper(2, 1, 0, 2));
+    System.out.println(fibHelper(14, 1, 0, 2));
+    System.out.println(fibHelper(46, 1, 0, 2) + " (should be 1836311903)");
 
   }
 
@@ -35,7 +37,9 @@ public class recursion{
   //currentNum is the current place in the sequence that the method is at.
   //prev is the previous fibonacci number from currentNum.
   //behindPrev is the fibonacci number before prev.
+  //this works up to 46, but once you make n 47, the value is too large to be stored in an int.
   private static int fibHelper(int n, int prev, int behindPrev, int currentNum){
+    System.out.println("currentNum: " + currentNum + ". prev: " + prev + ". behindPrev: " + behindPrev);
     if (n < 2) return n;
     if (currentNum == n) return prev + behindPrev;
     else return fibHelper(n, prev + behindPrev, prev, currentNum + 1);
