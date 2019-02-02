@@ -30,10 +30,10 @@ public class recursion{
   //currentNum is the current place in the sequence that the method is at.
   //prev is the previous fibonacci number from currentNum.
   //behindPrev is the fibonacci number before prev.
-  public static int fibHelper(int n, int prev, int behindPrev, int currentNum){
+  private static int fibHelper(int n, int prev, int behindPrev, int currentNum){
     if (n < 2) return n;
     if (currentNum == n) return prev + behindPrev;
-    //else return fibHelper(n, )
+    else return fibHelper(n, prev + behindPrev, prev, currentNum + 1);
   }
 
 }
