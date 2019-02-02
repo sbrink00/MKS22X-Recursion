@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 public class recursion{
   public static void main(String[]args){
     System.out.println("square root helper method testing:");
@@ -25,8 +26,15 @@ public class recursion{
     System.out.println(fib(2));
     System.out.println(fib(14) + " (should be 377)");
     System.out.println(fib(46) + " (should be 1836311903)");
+    System.out.println("------------------------------------------------");
+    System.out.println("testing makeAllSums method");
 
   }
+
+  public static ArrayList<Integer> makeAllSums(int n){
+    
+  }
+
 
   public static double sqrt(double n, double tolerance){
     return sqrtHelper(n, 1, tolerance);
