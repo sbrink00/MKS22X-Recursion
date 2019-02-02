@@ -33,6 +33,12 @@ public class recursion{
     System.out.println(makeAllSums(2));
     System.out.println(makeAllSums(3));
     System.out.println(makeAllSums(4));
+    //included this for loop so that I could test to make sure the size
+    //of the output of makeAllSums for all values of n from 0 to 24
+    //is equal to 2^n. Anything above 24 took too long to run.
+    for (int idx = 0; idx < 24; idx ++){
+      if (makeAllSums(idx).size()!=(int)Math.pow(2, idx))System.out.println(false);
+    }
   }
 
   public static ArrayList<Integer> makeAllSums(int n){
