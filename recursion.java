@@ -11,6 +11,11 @@ public class recursion{
     System.out.println(sqrt(.25, .001));
     System.out.println(sqrt(64, .001));
     System.out.println(sqrt(2, .001));
+    System.out.println("------------------------------------------------");
+    System.out.println("testing fibHelper method:");
+    System.out.println(fibHelper(0, 200, 389231, 323));
+    System.out.println(fibHelper(1, 200, 389231, 323));
+    System.out.println(fibHelper(2, 1, 0, 2));
 
   }
 
