@@ -39,7 +39,6 @@ public class recursion{
   //behindPrev is the fibonacci number before prev.
   //this works up to 46, but once you make n 47, the value is too large to be stored in an int.
   private static int fibHelper(int n, int prev, int behindPrev, int currentNum){
-    System.out.println("currentNum: " + currentNum + ". prev: " + prev + ". behindPrev: " + behindPrev);
     if (n < 2) return n;
     if (currentNum == n) return prev + behindPrev;
     else return fibHelper(n, prev + behindPrev, prev, currentNum + 1);
